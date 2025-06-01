@@ -1,0 +1,79 @@
+set surround
+set NERDTree
+set easymotion
+set argtextobj
+set commentary
+set textobj-indent
+set matchit
+set multiple-cursors
+set textobj-entire
+set mini-ai
+set which-key
+set quickscope
+set functiontextobj
+set highlightedyank
+
+
+"ideaVim
+"IdeaVim-EasyMotion
+"IdeaVimExtension
+"which-key
+"CodeGlance Pro
+
+set easymotion
+set scrolloff=10
+set ignorecase
+set hlsearch
+set number relativenumber
+set keep-english-in-normal
+set clipboard=unnamedplus
+
+nmap <CR> o<Esc>
+nmap <S-Enter> O<Esc>
+
+nnoremap <C-j> :m +1<CR>
+nnoremap <C-k> :m -2<CR>
+inoremap <C-j> <Esc> :m +1<CR>gi
+inoremap <C-k> <Esc> :m -2<CR>gi
+xnoremap <C-j> :m '>+1<cr>gv=gv
+xnoremap <C-k> :m '<-2<cr>gv=gv
+
+nnoremap J 5j
+nnoremap K 5k
+
+imap jj <Esc>
+imap jk <Esc>
+
+map Q gq
+nmap ge <action>(GotoNextError)
+nmap gt <action>(GotoTest)
+nmap gm <action>(MethodUp)
+nmap ga <action>(GotoImplementation)
+
+nmap L <action>(NextTab)
+nmap H <action>(PreviousTab)
+
+let mapleader = " "
+
+nnoremap <leader>nn :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+set notimeout
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
